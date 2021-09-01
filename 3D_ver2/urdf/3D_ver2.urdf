@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="3D_ver2">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="0.077437 -0.014827 0.010718"
+        rpy="0 0 0" />
+      <mass
+        value="0.0794" />
+      <inertia
+        ixx="9.6765E-05"
+        ixy="-6.2069E-12"
+        ixz="2.4642E-09"
+        iyy="5.0128E-05"
+        iyz="-6.4522E-11"
+        izz="5.0102E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="wheel_backright">
+    <inertial>
+      <origin
+        xyz="0 1.3299E-06 -0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035028" />
+      <inertia
+        ixx="2.0609E-07"
+        ixy="9.9262E-24"
+        ixz="-8.9791E-23"
+        iyy="2.0608E-07"
+        iyz="-5.0635E-24"
+        izz="3.9757E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_backright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_backright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel1"
+    type="continuous">
+    <origin
+      xyz="0.078031 0.020173 -0.029026"
+      rpy="1.5708 0.20072 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel_backright" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_backleft">
+    <inertial>
+      <origin
+        xyz="1.3878E-17 1.3299E-06 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035028" />
+      <inertia
+        ixx="2.0609E-07"
+        ixy="-3.0159E-26"
+        ixz="2.2058E-24"
+        iyy="2.0608E-07"
+        iyz="2.5955E-27"
+        izz="3.9757E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_backleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_backleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel2"
+    type="continuous">
+    <origin
+      xyz="0.078031 -0.049827 -0.029026"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base" />
+    <child
+      link="wheel_backleft" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="slide_back">
+    <inertial>
+      <origin
+        xyz="0 -0.05113 1.7347E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027934" />
+      <inertia
+        ixx="3.4942E-07"
+        ixy="-1.4017E-24"
+        ixz="-1.0838E-24"
+        iyy="3.9932E-08"
+        iyz="-9.7887E-25"
+        izz="3.4715E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/slide_back.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/slide_back.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slide1"
+    type="prismatic">
+    <origin
+      xyz="0.076031 -0.014827 0.01077"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="base" />
+    <child
+      link="slide_back" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="universal_pin">
+    <inertial>
+      <origin
+        xyz="1.7347E-18 1.9284E-09 1.9284E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.00027149" />
+      <inertia
+        ixx="5.9356E-09"
+        ixy="4.4722E-15"
+        ixz="-4.4722E-15"
+        iyy="3.2007E-09"
+        iyz="1.0097E-21"
+        izz="3.2007E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/universal_pin.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/universal_pin.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="yaw"
+    type="revolute">
+    <origin
+      xyz="0 -0.068 0"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="slide_back" />
+    <child
+      link="universal_pin" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="slide_front">
+    <inertial>
+      <origin
+        xyz="-1.7347E-18 -0.05113 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0027934" />
+      <inertia
+        ixx="3.4715E-07"
+        ixy="7.8813E-24"
+        ixz="-3.3029E-25"
+        iyy="3.9932E-08"
+        iyz="-1.185E-23"
+        izz="3.4942E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/slide_front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/slide_front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pitch"
+    type="revolute">
+    <origin
+      xyz="-0.068 0 0"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="universal_pin" />
+    <child
+      link="slide_front" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="head">
+    <inertial>
+      <origin
+        xyz="-2.3602E-08 -0.0014065 -5.2502E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0794" />
+      <inertia
+        ixx="5.0128E-05"
+        ixy="5.0032E-12"
+        ixz="-6.4522E-11"
+        iyy="9.6765E-05"
+        iyz="-2.4642E-09"
+        izz="5.0102E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/head.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/head.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="slide2"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="slide_front" />
+    <child
+      link="head" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel_frontright">
+    <inertial>
+      <origin
+        xyz="0 1.3299E-06 -0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035028" />
+      <inertia
+        ixx="2.0609E-07"
+        ixy="-4.1854E-25"
+        ixz="-3.4801E-26"
+        iyy="2.0608E-07"
+        iyz="3.5877E-27"
+        izz="3.9757E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_frontright.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_frontright.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel3"
+    type="continuous">
+    <origin
+      xyz="-0.035 -0.002 -0.039796"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="head" />
+    <child
+      link="wheel_frontright" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wheel_frontleft">
+    <inertial>
+      <origin
+        xyz="0 1.3299E-06 0.0025"
+        rpy="0 0 0" />
+      <mass
+        value="0.0035028" />
+      <inertia
+        ixx="2.0609E-07"
+        ixy="-4.1841E-25"
+        ixz="2.1541E-24"
+        iyy="2.0608E-07"
+        iyz="7.9016E-27"
+        izz="3.9757E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_frontleft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://3D_ver2/meshes/wheel_frontleft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel4"
+    type="continuous">
+    <origin
+      xyz="0.035 -0.002 -0.039796"
+      rpy="1.5708 0 1.5708" />
+    <parent
+      link="head" />
+    <child
+      link="wheel_frontleft" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

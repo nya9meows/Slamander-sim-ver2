@@ -1,0 +1,1051 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="segl_ver3">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0107631885751334 -0.196706606649359 0.125751388465178"
+        rpy="0 0 0" />
+      <mass
+        value="0.0292481653022373" />
+      <inertia
+        ixx="3.88747734808684E-05"
+        ixy="-3.06596509862475E-09"
+        ixz="-5.98006564893272E-08"
+        iyy="1.98637946417116E-05"
+        iyz="-7.64627510958977E-10"
+        izz="1.93056895699406E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="sus1">
+    <inertial>
+      <origin
+        xyz="0.0245281392565478 -0.00579743460623024 -0.00799999809102764"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464615393237" />
+      <inertia
+        ixx="3.44953495510738E-07"
+        ixy="5.10613042897034E-08"
+        ixz="1.27802151011425E-14"
+        iyy="2.31225028349891E-06"
+        iyz="2.19478513297689E-14"
+        izz="2.08649864683354E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus1r"
+    type="revolute">
+    <origin
+      xyz="0.0209492573018266 -0.281484925581457 0.067161403096656"
+      rpy="3.14159265358979 -0.523598775598299 1.57079632679491" />
+    <parent
+      link="base_link" />
+    <child
+      link="sus1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w1">
+    <inertial>
+      <origin
+        xyz="5.22216991871716E-12 0.0109999999662131 1.83967285849462E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595067572" />
+      <inertia
+        ixx="2.63042675367951E-06"
+        ixy="-7.55275668023255E-16"
+        ixz="6.57318689953459E-16"
+        iyy="9.68771865572928E-07"
+        iyz="-1.40328660408691E-15"
+        izz="2.63042674934207E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w1c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.5707963267949 0 -1.09932300692303" />
+    <parent
+      link="sus1" />
+    <child
+      link="w1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sus2">
+    <inertial>
+      <origin
+        xyz="0.0245281388862843 -0.00579743458596982 -0.00799999408218524"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464622012381" />
+      <inertia
+        ixx="3.44953504540437E-07"
+        ixy="5.10613036903035E-08"
+        ixz="1.55592500691201E-13"
+        iyy="2.31225031988856E-06"
+        iyz="4.30376878606254E-14"
+        izz="2.0864986737292E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus2r"
+    type="revolute">
+    <origin
+      xyz="0.0209492573018259 -0.103962409966498 0.0810178095573729"
+      rpy="0 -0.523598775598294 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="sus2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w2">
+    <inertial>
+      <origin
+        xyz="5.21314241774817E-12 0.0109999999660882 1.84374460143744E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595064063" />
+      <inertia
+        ixx="2.63042675366783E-06"
+        ixy="-7.55284323641185E-16"
+        ixz="6.57278297069787E-16"
+        iyy="9.6877186556785E-07"
+        iyz="-1.3996895463275E-15"
+        izz="2.63042674933547E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w2c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.5707963267949 0 -1.09932300692303" />
+    <parent
+      link="sus2" />
+    <child
+      link="w2" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sus3">
+    <inertial>
+      <origin
+        xyz="0.0245281427339186 -0.00579743476204341 -0.00799999583699243"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464531506038" />
+      <inertia
+        ixx="3.44953306450567E-07"
+        ixy="5.10613156648366E-08"
+        ixz="7.85719483349813E-14"
+        iyy="2.31224993634185E-06"
+        iyz="3.48701370300672E-14"
+        izz="2.08649849059194E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus3r"
+    type="revolute">
+    <origin
+      xyz="0.0209492573018252 -0.20472366777412 0.227828614593289"
+      rpy="1.5707963267949 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="sus3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w3">
+    <inertial>
+      <origin
+        xyz="5.21754861537715E-12 0.0109999999661513 1.84169901551456E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595065764" />
+      <inertia
+        ixx="2.63042675367367E-06"
+        ixy="-7.5526741230513E-16"
+        ixz="6.57296825915509E-16"
+        iyy="9.6877186557038E-07"
+        iyz="-1.40145231771364E-15"
+        izz="2.63042674933879E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w3c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.5707963267949 0 -1.09932300692303" />
+    <parent
+      link="sus3" />
+    <child
+      link="w3" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="con1">
+    <inertial>
+      <origin
+        xyz="0.0150000000000001 -8.32667268468867E-17 -1.52655665885959E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00235619449019234" />
+      <inertia
+        ixx="2.94524311274043E-08"
+        ixy="4.86347831101101E-22"
+        ixz="1.21907854063494E-21"
+        iyy="1.91440802328128E-07"
+        iyz="0"
+        izz="1.91440802328128E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="con1f"
+    type="fixed">
+    <origin
+      xyz="0.0116192573018258 -0.196723667774025 0.125335942415772"
+      rpy="3.05723846361397 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="con1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="con2">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0.0511300493614309 -2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00279336263712055" />
+      <inertia
+        ixx="3.47148573143988E-07"
+        ixy="-3.19850039887356E-22"
+        ixz="6.2082539733927E-24"
+        iyy="3.99316347503688E-08"
+        iyz="1.06347580390551E-21"
+        izz="3.49420107139763E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="con2p"
+    type="prismatic">
+    <origin
+      xyz="-0.00299999999999994 0 0"
+      rpy="0 -1.48644213681907 -1.5707963267948" />
+    <parent
+      link="con1" />
+    <child
+      link="con2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="uni">
+    <inertial>
+      <origin
+        xyz="4.44089209850063E-16 1.92840421409102E-09 1.92840421409102E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.000271492148155946" />
+      <inertia
+        ixx="5.93557661395575E-09"
+        ixy="4.47220671747469E-15"
+        ixz="-4.47220671835687E-15"
+        iyy="3.20070578284846E-09"
+        iyz="1.00938791707803E-21"
+        izz="3.20070578284845E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/uni.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/uni.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="unir"
+    type="revolute">
+    <origin
+      xyz="0 0.068 0"
+      rpy="0 0 1.5708" />
+    <parent
+      link="con2" />
+    <child
+      link="uni" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="con3">
+    <inertial>
+      <origin
+        xyz="0.0168699506385676 -4.71844785465692E-16 1.66533453693773E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00279336263712055" />
+      <inertia
+        ixx="3.99316347503688E-08"
+        ixy="-2.21467257943283E-21"
+        ixz="9.90791802748748E-22"
+        iyy="3.49420107139762E-07"
+        iyz="2.19679978128615E-23"
+        izz="3.47148573143987E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="con3r"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="uni" />
+    <child
+      link="con3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="con4">
+    <inertial>
+      <origin
+        xyz="-0.0150000000000001 -7.49400541621981E-16 -3.33066907387547E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00235619449019234" />
+      <inertia
+        ixx="2.94524311274043E-08"
+        ixy="-1.15743391516541E-21"
+        ixz="-6.82310798372852E-22"
+        iyy="1.91440802328128E-07"
+        iyz="6.61744490042422E-24"
+        izz="1.91440802328128E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/con4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="con4p"
+    type="prismatic">
+    <origin
+      xyz="0.0650000000000009 0 0"
+      rpy="-0.98269663008103 0 0" />
+    <parent
+      link="con3" />
+    <child
+      link="con4" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="base2">
+    <inertial>
+      <origin
+        xyz="-1.70019768645918E-05 0.00214393347748171 0.000415436461369573"
+        rpy="0 0 0" />
+      <mass
+        value="0.0292481701284546" />
+      <inertia
+        ixx="1.98637964228682E-05"
+        ixy="3.05143639764182E-09"
+        ixz="8.03293928394738E-10"
+        iyy="3.88747924136026E-05"
+        iyz="-5.98005959044395E-08"
+        izz="1.93057075699702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/base2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.298039215686275 0.298039215686275 0.298039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/base2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base2f"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="3.14159265358979 -0.459097854482748 1.5707963267949" />
+    <parent
+      link="con4" />
+    <child
+      link="base2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="sus4">
+    <inertial>
+      <origin
+        xyz="0.0245281392565479 -0.00579743460623028 -0.00799999809102761"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464615393236" />
+      <inertia
+        ixx="3.44953495510737E-07"
+        ixy="5.10613042897036E-08"
+        ixz="1.27802164775711E-14"
+        iyy="2.31225028349891E-06"
+        iyz="2.19478512172723E-14"
+        izz="2.08649864683353E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus4r"
+    type="revolute">
+    <origin
+      xyz="-0.092761257807526 0.0123300000000007 -0.0443181328584011"
+      rpy="0 -0.523598775598312 0" />
+    <parent
+      link="base2" />
+    <child
+      link="sus4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w4">
+    <inertial>
+      <origin
+        xyz="5.2220727742025E-12 0.010999999966213 1.83967285849462E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595067572" />
+      <inertia
+        ixx="2.63042675367951E-06"
+        ixy="-7.55277534142717E-16"
+        ixz="6.5731800173919E-16"
+        iyy="9.6877186557293E-07"
+        iyz="-1.40328700113361E-15"
+        izz="2.63042674934208E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w4c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.57079632679489 0 -1.09932300692303" />
+    <parent
+      link="sus4" />
+    <child
+      link="w4" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sus5">
+    <inertial>
+      <origin
+        xyz="0.0245281388862843 -0.00579743458596979 -0.00799999408218524"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464622012381" />
+      <inertia
+        ixx="3.44953504540437E-07"
+        ixy="5.10613036903036E-08"
+        ixz="1.55592501723522E-13"
+        iyy="2.31225031988856E-06"
+        iyz="4.30376880723837E-14"
+        izz="2.0864986737292E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus5r"
+    type="revolute">
+    <origin
+      xyz="0.00800000000009428 0.01233 0.102492672177516"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="base2" />
+    <child
+      link="sus5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w5">
+    <inertial>
+      <origin
+        xyz="5.21316323442989E-12 0.0109999999660882 1.84374182587987E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595064064" />
+      <inertia
+        ixx="2.63042675366783E-06"
+        ixy="-7.55283516312907E-16"
+        ixz="6.57280202893918E-16"
+        iyy="9.68771865567853E-07"
+        iyz="-1.39969026101155E-15"
+        izz="2.63042674933548E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w5c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.5707963267949 0 -1.09932300692303" />
+    <parent
+      link="sus5" />
+    <child
+      link="w5" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="sus6">
+    <inertial>
+      <origin
+        xyz="0.0245281427339184 -0.00579743476204339 -0.00799999583699257"
+        rpy="0 0 0" />
+      <mass
+        value="0.00484464531506037" />
+      <inertia
+        ixx="3.44953306450566E-07"
+        ixy="5.10613156648364E-08"
+        ixz="7.85719547593264E-14"
+        iyy="2.31224993634185E-06"
+        iyz="3.48701370005681E-14"
+        izz="2.08649849059194E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/sus6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="sus6r"
+    type="revolute">
+    <origin
+      xyz="0.0847612578074339 0.0123299999999992 -0.0581745393191151"
+      rpy="-3.14159265358979 -0.523598775598282 3.14159265358978" />
+    <parent
+      link="base2" />
+    <child
+      link="sus6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="w6">
+    <inertial>
+      <origin
+        xyz="5.21768739325523E-12 0.0109999999661513 1.84169901551456E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00802564595065763" />
+      <inertia
+        ixx="2.63042675367367E-06"
+        ixy="-7.55270753422271E-16"
+        ixz="6.57297037673745E-16"
+        iyy="9.68771865570381E-07"
+        iyz="-1.40144992956882E-15"
+        izz="2.63042674933879E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://segl_ver3/meshes/w6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="w6c"
+    type="continuous">
+    <origin
+      xyz="0 0 -0.019"
+      rpy="1.5707963267949 0 -1.09932300692303" />
+    <parent
+      link="sus6" />
+    <child
+      link="w6" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+</robot>
